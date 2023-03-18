@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from core import predict
+from core import predict_answer
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def question():
     data = request.get_json()
 
     question = data['question']
-    answer = predict(question)
+    answer = predict_answer(question)
 
     res = jsonify({"message": answer})
 
