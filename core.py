@@ -8,12 +8,12 @@ import joblib
 faq_df = pd.read_json("faq_data.json")
 
 # Preprocess the data
-faq_df["Question"] = faq_df["Question"].str.lower()  # convert to lowercase
+faq_df["question"] = faq_df["question"].str.lower()  # convert to lowercase
 
 # Vectorize the questions
 vectorizer = CountVectorizer()
-X = vectorizer.fit_transform(faq_df["Question"])
-y = faq_df["Answer"]
+X = vectorizer.fit_transform(faq_df["question"])
+y = faq_df["answer"]
 
 # Train the classifier
 clf = MultinomialNB()
