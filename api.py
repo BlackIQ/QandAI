@@ -1,24 +1,18 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
 from core import predict_answer
 
 app = Flask(__name__)
-
 CORS(app)
 
 
 @app.route('/api/predict', methods=['POST'])
-def question():
-    data = request.get_json()
-
-    question = data['question']
+def predict():
+    question = request.json['question']
     answer = predict_answer(question)
-
-    res = jsonify({"message": answer})
-
-    return res, 200
+    response = {'answer': answer}
+    return jsonify(response)
 
 
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
