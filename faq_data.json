@@ -1,0 +1,14 @@
+[
+    {
+        "Question": "What is machine learning?",
+        "Answer": "Machine learning is a method of teaching computers to learn from data, without being explicitly programmed."
+    },
+    {
+        "Question": "What are some common machine learning algorithms?",
+        "Answer": "Some common machine learning algorithms include linear regression, logistic regression, decision trees, random forests, k-nearest neighbors, and support vector machines."
+    },
+    {
+        "Question": "What is deep learning?",
+        "Answer": "Deep learning is a subset of machine learning that uses artificial neural networks to model and solve complex problems."
+    }
+]
