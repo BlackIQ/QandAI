@@ -9,6 +9,9 @@ scikit-learn = "*"
 flask = "*"
 flask-cors = "*"
 mysql-connector-python = "*"
+openai = "*"
+python-dotenv = "*"
+nltk = "*"
 
 [dev-packages]
 autopep8 = "*"
