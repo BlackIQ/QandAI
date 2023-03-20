@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 # Load the JSON data into a Pandas dataframe
-faq_df = pd.read_json("faq_data.json")
+faq_df = pd.read_json("data/faq_data.json")
 
 # Preprocess the data
 faq_df["question"] = faq_df["question"].str.lower()  # convert to lowercase
@@ -20,14 +20,14 @@ clf = MultinomialNB()
 clf.fit(X, y)
 
 # Save the model to a file
-joblib.dump(clf, "faq_model.joblib")
+joblib.dump(clf, "models/faq_model.joblib")
 
 # Define a predict_answer() function
 
 
 def predict_answer(question):
     # Load the model from a file
-    clf_loaded = joblib.load("faq_model.joblib")
+    clf_loaded = joblib.load("models/faq_model.joblib")
 
     question = question.lower()
     X_question = vectorizer.transform([question])
