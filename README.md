@@ -32,18 +32,19 @@ To use QandAI, you will need:
 
 To install QandAI, follow these steps:
 
-1. Clone the repository from GitHub: `git clone https://github.com/BlackIQ/QandAI.git`
-2. Navigate to the project directory: `cd QandAI`
-3. Install the required dependencies: `pipenv install`
+1. Clone the repository from GitHub: `git clone https://github.com/BlackIQ/QandAI.git`.
+2. Navigate to the project directory: `cd QandAI`.
+3. Install the required dependencies: `pipenv install`.
 
 ### Usage
 
 To use QandAI, follow these steps:
 
-1. Train the model on your own data or use the included sample data: `python3 app/core/core.py`
-2. Start the Flask server: `python3 wsgi.py`
-3. Send a POST request to the `/api/predict` endpoint with a JSON payload containing a `question` key and the user's question as the value.
-4. The server will return a JSON response containing the top 3 most likely answers, ranked by probability.
+1. Copy `.env.example` to `.env` and change `API_PORT` to your custome port.
+2. Train the model on your own data or use the included sample data: `python3 app/core/core.py`
+3. Start the Flask server: `python3 wsgi.py`
+4. Send a POST request to the `/api/predict` endpoint with a JSON payload containing a `question` key and the user's question as the value.
+5. The server will return a JSON response containing the top 3 most likely answers, ranked by probability.
 
 ### Customization
 
