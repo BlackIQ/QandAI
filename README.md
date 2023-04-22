@@ -40,8 +40,8 @@ To install QandAI, follow these steps:
 
 To use QandAI, follow these steps:
 
-1. Train the model on your own data or use the included sample data: `pipenv run python train.py`
-2. Start the Flask server: `pipenv run python api.py`
+1. Train the model on your own data or use the included sample data: `python3 app/core/core.py`
+2. Start the Flask server: `python3 wsgi.py`
 3. Send a POST request to the `/api/predict` endpoint with a JSON payload containing a `question` key and the user's question as the value.
 4. The server will return a JSON response containing the top 3 most likely answers, ranked by probability.
 
@@ -49,9 +49,9 @@ To use QandAI, follow these steps:
 
 To customize QandAI, you can modify the following:
 
-- `faq_data.json`: Add or remove questions and answers to train the model on your own data
-- `core.py`: Modify the code for preprocessing and vectorizing the input data
-- `faq_model.joblib`: Train and save a new model with different hyperparameters or a different algorithm
+- `data/faq_data.json`: Add or remove questions and answers to train the model on your own data
+- `app/core/core.py`: Modify the code for preprocessing and vectorizing the input data
+- `models/faq_model.joblib`: Train and save a new model with different hyperparameters or a different algorithm
 
 ## License
 
