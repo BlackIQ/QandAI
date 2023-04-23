@@ -10,6 +10,7 @@ CORS(app)
 def predict():
     question = request.json['question']
     answer = predict_answer(question)
+
     response = {'answer': answer}
 
     return jsonify(response)

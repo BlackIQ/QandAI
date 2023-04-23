@@ -19,7 +19,6 @@ joblib.dump(clf, "models/faq_model.joblib")
 
 
 def predict_answer(question):
-    # Load the model from a file
     clf_loaded = joblib.load("models/faq_model.joblib")
 
     question = question.lower()
