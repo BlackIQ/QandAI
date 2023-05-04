@@ -1,8 +1,10 @@
 import pandas as pd
+
+import joblib
+
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import train_test_split
-import joblib
+
 
 faq_df = pd.read_json("data/faq_data.json")
 
