@@ -1,5 +1,5 @@
-from app.core.core import predict_answer
-from app.tools.tts import tts
+from core.core import predict_answer
+from tools.tts import tts
 
 import speech_recognition as sr
 from time import sleep
